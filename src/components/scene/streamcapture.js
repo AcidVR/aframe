@@ -41,7 +41,7 @@ var FRAGMENT_SHADER = [
  * This is based on https://github.com/spite/THREE.CubemapToEquirectangular
  * To capture an equirectangular projection of the scene a THREE.CubeCamera is used
  * The cube map produced by the CubeCamera is projected on a quad and then rendered to
- * WebGLRenderTarget with an ortographic camera.
+ * WebGLRenderTarget with an orthographic camera.
  */
 module.exports.Component = registerComponent('streamcapture', {
   schema: {
@@ -49,7 +49,8 @@ module.exports.Component = registerComponent('streamcapture', {
     height: { default: 2048 },
     camera: { type: 'selector' },
     duration: { default: 60000 },
-    frameRate: { default: 60 }
+    frameRate: { default: 60 },
+    downloadFunction: { default: null }
   },
 
   init: function () {
@@ -63,12 +64,6 @@ module.exports.Component = registerComponent('streamcapture', {
       el.addEventListener('render-target-loaded', setup);
     }
 
-    el.addEventListener('animationtimelinecomplete', function(e) {
-      console.log('animationtimelinecomplete', e.detail.name);
-      stopRecording();
-      // console.log(JSON.stringify(self.timecodes));
-    });
-
     function handleDataAvailable(event) {
       if (event.data && event.data.size > 0) {
         self.recordedBlobs.push(event.data);
@@ -81,24 +76,11 @@ module.exports.Component = registerComponent('streamcapture', {
       var options = { mimeType: 'video/webm;codecs=h264' };
       self.mediaRecorder = new MediaRecorder(stream, options);
       self.mediaRecorder.ondataavailable = handleDataAvailable;
-      self.mediaRecorder.start(5000); // collect 1000ms of data
-    }
-
-    function download() {
-      var blob = new Blob(self.recordedBlobs, { type: 'video/webm;codecs=h264' });
-      var url = window.URL.createObjectURL(blob);
-      var a = document.createElement('a');
-      a.id = 'download';
-      a.style.display = 'none';
-      a.href = url;
-      a.download = 'download.webm';
-      document.querySelector('#downloadContainer').appendChild(a);
-      a.click();
+      self.mediaRecorder.start(5000); // collect 5000ms of data
     }
 
     function stopRecording() {
       self.mediaRecorder.stop();
-      download();
     }
 
     function setup () {
