@@ -39,5 +39,6 @@ require('./scene/fog');
 require('./scene/keyboard-shortcuts');
 require('./scene/pool');
 require('./scene/screenshot');
+require('./scene/streamcapture');
 require('./scene/stats');
 require('./scene/vr-mode-ui');
