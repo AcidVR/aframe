@@ -49,8 +49,7 @@ module.exports.Component = registerComponent('streamcapture', {
     height: { default: 2048 },
     camera: { type: 'selector' },
     duration: { default: 60000 },
-    frameRate: { default: 60 },
-    downloadFunction: { default: null }
+    frameRate: { default: 60 }
   },
 
   init: function () {

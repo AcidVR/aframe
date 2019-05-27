@@ -70004,8 +70004,7 @@ module.exports.Component = registerComponent('streamcapture', {
     height: { default: 2048 },
     camera: { type: 'selector' },
     duration: { default: 60000 },
-    frameRate: { default: 60 },
-    downloadFunction: { default: null }
+    frameRate: { default: 60 }
   },
 
   init: function () {
@@ -70018,11 +70017,6 @@ module.exports.Component = registerComponent('streamcapture', {
     } else {
       el.addEventListener('render-target-loaded', setup);
     }
-
-    el.addEventListener('animationtimelinecomplete', function(e) {
-      console.log('animationtimelinecomplete', e.detail.name);
-      stopRecording();
-    });
 
     function handleDataAvailable(event) {
       if (event.data && event.data.size > 0) {
@@ -70039,25 +70033,8 @@ module.exports.Component = registerComponent('streamcapture', {
       self.mediaRecorder.start(5000); // collect 5000ms of data
     }
 
-    function download() {
-      if (self.data.downloadFunction) {
-        self.data.downloadFunction();
-      } else {
-        var blob = new Blob(self.recordedBlobs, { type: 'video/webm;codecs=h264' });
-        var url = window.URL.createObjectURL(blob);
-        var a = document.createElement('a');
-        a.id = 'download';
-        a.style.display = 'none';
-        a.href = url;
-        a.download = 'download.webm';
-        document.querySelector('#downloadContainer').appendChild(a);
-        a.click();
-      }
-    }
-
     function stopRecording() {
       self.mediaRecorder.stop();
-      download();
     }
 
     function setup () {
@@ -78268,7 +78245,7 @@ _dereq_('./core/a-mixin');
 _dereq_('./extras/components/');
 _dereq_('./extras/primitives/');
 
-console.log('A-Frame Version: 0.9.2 (Date 2019-05-27, Commit #2e89a3db)');
+console.log('A-Frame Version: 0.9.2 (Date 2019-05-27, Commit #70ada0f3)');
 console.log('three Version (https://github.com/supermedium/three.js):',
             pkg.dependencies['super-three']);
 console.log('WebVR Polyfill Version:', pkg.dependencies['webvr-polyfill']);
