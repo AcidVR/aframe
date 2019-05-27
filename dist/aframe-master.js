@@ -70067,7 +70067,6 @@ module.exports.Component = registerComponent('streamcapture', {
       el.camera = self.camera;
       // Resize quad, camera, and canvas.
       self.resize(self.data.width, self.data.height);
-      startRecording();
     }
   },
 
@@ -78245,7 +78244,7 @@ _dereq_('./core/a-mixin');
 _dereq_('./extras/components/');
 _dereq_('./extras/primitives/');
 
-console.log('A-Frame Version: 0.9.2 (Date 2019-05-27, Commit #70ada0f3)');
+console.log('A-Frame Version: 0.9.2 (Date 2019-05-27, Commit #f66e7396)');
 console.log('three Version (https://github.com/supermedium/three.js):',
             pkg.dependencies['super-three']);
 console.log('WebVR Polyfill Version:', pkg.dependencies['webvr-polyfill']);

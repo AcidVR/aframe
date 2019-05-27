@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1750b2ef-1635-4b24-81ee-6f056502ace8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/aframe-master.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/aframe-master.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/aframe-master.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/aframe-master.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/aframe-master.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/aframe-master.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/aframe-master.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/aframe-master.min.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/scene/streamcapture.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/scene/streamcapture.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/scene/streamcapture.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2520">
-              <caret line="120" column="34" selection-start-line="120" selection-start-column="34" selection-end-line="120" selection-end-column="34" />
+            <state relative-caret-position="95">
+              <caret line="111" column="30" selection-start-line="111" selection-start-column="30" selection-end-line="111" selection-end-column="30" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -44,10 +38,11 @@
       <find>canvas</find>
       <find>resize</find>
       <find>time</find>
+      <find>animationtimelinecomplete</find>
     </findStrings>
     <dirStrings>
-      <dir>$PROJECT_DIR$/src/components</dir>
       <dir>$PROJECT_DIR$/src</dir>
+      <dir>$PROJECT_DIR$/src/components</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -230,17 +225,17 @@
       <workItem from="1558915061994" duration="3384000" />
       <workItem from="1558922083925" duration="2281000" />
       <workItem from="1558926118938" duration="773000" />
-      <workItem from="1558927916651" duration="557000" />
+      <workItem from="1558927916651" duration="1247000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16884000" />
+    <option name="totallyTimeSpent" value="17574000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29756796" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29756796" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -255,7 +250,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Amazon EC2" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.2911548" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.2911548" />
       <window_info anchor="bottom" id="Docker" order="9" weight="0.32923833" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
@@ -351,8 +346,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/scene/streamcapture.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2520">
-          <caret line="120" column="34" selection-start-line="120" selection-start-column="34" selection-end-line="120" selection-end-column="34" />
+        <state relative-caret-position="95">
+          <caret line="111" column="30" selection-start-line="111" selection-start-column="30" selection-end-line="111" selection-end-column="30" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>

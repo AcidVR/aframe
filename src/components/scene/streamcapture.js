@@ -112,7 +112,6 @@ module.exports.Component = registerComponent('streamcapture', {
       el.camera = self.camera;
       // Resize quad, camera, and canvas.
       self.resize(self.data.width, self.data.height);
-      startRecording();
     }
   },
 
