@@ -69,18 +69,18 @@ module.exports.Component = registerComponent('streamcapture', {
       }
     }
 
-    function startRecording() {
+    self.startRecording = function() {
       var canvas = document.querySelector('canvas');
       var stream = canvas.captureStream(self.data.frameRate);
       var options = { mimeType: 'video/webm;codecs=h264' };
       self.mediaRecorder = new MediaRecorder(stream, options);
       self.mediaRecorder.ondataavailable = handleDataAvailable;
       self.mediaRecorder.start(5000); // collect 5000ms of data
-    }
+    };
 
-    function stopRecording() {
+    self.stopRecording = function() {
       self.mediaRecorder.stop();
-    }
+    };
 
     function setup () {
       var gl = el.renderer.getContext();

@@ -70024,18 +70024,18 @@ module.exports.Component = registerComponent('streamcapture', {
       }
     }
 
-    function startRecording() {
+    self.startRecording = function() {
       var canvas = document.querySelector('canvas');
       var stream = canvas.captureStream(self.data.frameRate);
       var options = { mimeType: 'video/webm;codecs=h264' };
       self.mediaRecorder = new MediaRecorder(stream, options);
       self.mediaRecorder.ondataavailable = handleDataAvailable;
       self.mediaRecorder.start(5000); // collect 5000ms of data
-    }
+    };
 
-    function stopRecording() {
+    self.stopRecording = function() {
       self.mediaRecorder.stop();
-    }
+    };
 
     function setup () {
       var gl = el.renderer.getContext();
@@ -78244,7 +78244,7 @@ _dereq_('./core/a-mixin');
 _dereq_('./extras/components/');
 _dereq_('./extras/primitives/');
 
-console.log('A-Frame Version: 0.9.2 (Date 2019-05-27, Commit #f66e7396)');
+console.log('A-Frame Version: 0.9.2 (Date 2019-05-27, Commit #3b2fb660)');
 console.log('three Version (https://github.com/supermedium/three.js):',
             pkg.dependencies['super-three']);
 console.log('WebVR Polyfill Version:', pkg.dependencies['webvr-polyfill']);
